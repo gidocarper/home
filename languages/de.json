@@ -1,0 +1,85 @@
+{
+    "intentNotRecognized": [
+        "was", "huch", "wot?","nix verstanden", "nee", "so was", "upsa"
+    ],
+    "done": "Gemacht!",
+    "okay": "Okay!",
+    "dateService" : {
+        "whenIsChristmas": "Es sind noch {} Tage bis Weihnachten, heute mitgerechnet.",
+        "whatDayIsIt": "Heute ist {} ",
+        "whatIsTheTime": "Es ist jetzt {} "
+    },
+    "volumeControl": {
+        "setVolume": "Okay, Lautstärke auf {}% gesetz"
+    },
+    "musicPlayer": {
+        "scanningIsDone": "Ich bin fertig mit dem Scannen von deiner Musik",
+        "foundNewSongs": "Ich bin fertig mit scannen. Du hast {} neue Songs",
+        "removedSongs": "Ich bin fertig mit scannen. Du hast {} Songs geloescht",
+        "startedPlaying": "Okay",
+        "playListEnded": "Sorry das war das letzte Lied",
+        "nextSong": "Okay",
+        "previuosSong": "Okay",
+        "stoppedTheMusic": "Okay musik gestoppt"
+    },
+    "wlan": {
+        "wlanName": " ein wlan mit der Name ",
+        "thereAreFollingWlan": "Ich habe folgende netzweken gefunden: "
+    },
+    "timer": {
+        "timer": "Teimer",
+        "durationUnit": {
+            "day": "Tag",
+            "days": "Tage",
+            "days2": "Tagen",
+            "hours": "Stunden",
+            "hour": "Stunde",
+            "minute": "Minute",
+            "minutes": "Minuten",
+            "seconds": "Sekunden",
+            "second": "Sekunde"
+        },
+        "timerBase": {
+            "get_duration_raw": {
+                "and": "und",
+                "seconds": "{} Sekunde",
+                "minutes": "{} Minuten{}{}",
+                "hours": "{} Stunden{}{}",
+                "days": "{} Tagen{}{}"
+            }
+        },
+        "timerSendNotification": {
+            "callback": {
+                "timerWithName": "Dein {} {} ist abgelaufen",
+                "timerWithOutName": "Dein {} {} ist abgelaufen {} "
+            },
+            "send_end": {
+                "timerWithName": "{} {} ab jetzt",
+                "timerWithOutName": "{} {} {} ab jetzt"
+            }
+        },
+        "get_duration_raw": {
+            "null": "nul",
+            "and": "und",
+            "seconds": "{} Sekunde",
+            "minutes": "{} Minuten{}{}",
+            "hours": "{} Stunden{}{}",
+            "days": "{} Tagen{}{}"
+        },
+        "timerRemainingTime": {
+            "amountOfTimers": "Du hast {} Teimer. ",
+            "oneTimer": "Du hast ein Teimer. ",
+            "noTimer": "Es läuft kein Teimer",
+            "multipleTimerTypes": ", Auf dein {} {} sind noch {} übrig."
+        },
+        "getFirstSecondTimer": {
+            "first": "erste",
+            "second": "zweite",
+            "third": "dritte",
+            "fourth": "viere",
+            "fifth": "fünfte"
+        },
+        "deleteOneTimer": " Dein {} wurde gelöscht",
+        "deleteAllTimers": "Alle teimer Wurde gelöscht"
+    }
+}

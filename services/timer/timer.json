@@ -1,0 +1,203 @@
+{
+  'input': 'Nudel Timer 3 Stunde und 5 Minute und 20 Sekunden',
+  'intent': {
+    'intentName': 'Timer',
+    'confidenceScore': 1.0
+  },
+  'siteId': 'default',
+  'id': None,
+  'slots': [
+    {
+      'entity': 'timerType',
+      'value': {
+        'kind': 'Unknown',
+        'value': 'Nudel'
+      },
+      'slotName': 'timerType',
+      'rawValue': 'nudel',
+      'confidence': 1.0,
+      'range': {
+        'start': 0,
+        'end': 5,
+        'rawStart': 0,
+        'rawEnd': 5
+      }
+    },
+    {
+      'entity': 'rhasspy/number',
+      'value': {
+        'kind': 'Number',
+        'value': 3
+      },
+      'slotName': 'duration',
+      'rawValue': 'drei',
+      'confidence': 1.0,
+      'range': {
+        'start': 12,
+        'end': 13,
+        'rawStart': 12,
+        'rawEnd': 16
+      }
+    },
+    {
+      'entity': 'durationUnit',
+      'value': {
+        'kind': 'Unknown',
+        'value': 'Stunde'
+      },
+      'slotName': 'durationUnit',
+      'rawValue': 'stunde',
+      'confidence': 1.0,
+      'range': {
+        'start': 14,
+        'end': 20,
+        'rawStart': 17,
+        'rawEnd': 23
+      }
+    },
+    {
+      'entity': 'rhasspy/number',
+      'value': {
+        'kind': 'Number',
+        'value': 5
+      },
+      'slotName': 'duration',
+      'rawValue': 'fünf',
+      'confidence': 1.0,
+      'range': {
+        'start': 25,
+        'end': 26,
+        'rawStart': 28,
+        'rawEnd': 32
+      }
+    },
+    {
+      'entity': 'durationUnit',
+      'value': {
+        'kind': 'Unknown',
+        'value': 'Minute'
+      },
+      'slotName': 'durationUnit',
+      'rawValue': 'minute',
+      'confidence': 1.0,
+      'range': {
+        'start': 27,
+        'end': 33,
+        'rawStart': 33,
+        'rawEnd': 39
+      }
+    },
+    {
+      'entity': 'rhasspy/number',
+      'value': {
+        'kind': 'Number',
+        'value': 20
+      },
+      'slotName': 'duration',
+      'rawValue': 'zwanzig',
+      'confidence': 1.0,
+      'range': {
+        'start': 38,
+        'end': 40,
+        'rawStart': 44,
+        'rawEnd': 51
+      }
+    },
+    {
+      'entity': 'durationUnit',
+      'value': {
+        'kind': 'Unknown',
+        'value': 'Sekunden'
+      },
+      'slotName': 'durationUnit',
+      'rawValue': 'sekunden',
+      'confidence': 1.0,
+      'range': {
+        'start': 41,
+        'end': 49,
+        'rawStart': 52,
+        'rawEnd': 60
+      }
+    }
+  ],
+  'sessionId': 'default-hey-mycroft-2-3ee8f8ac-c762-4b53-8376-7d9a03201789',
+  'customData': None,
+  'asrTokens': [
+    [
+      {
+        'value': 'Nudel',
+        'confidence': 1.0,
+        'rangeStart': 0,
+        'rangeEnd': 5,
+        'time': None
+      },
+      {
+        'value': 'Timer',
+        'confidence': 1.0,
+        'rangeStart': 6,
+        'rangeEnd': 11,
+        'time': None
+      },
+      {
+        'value': '3',
+        'confidence': 1.0,
+        'rangeStart': 12,
+        'rangeEnd': 13,
+        'time': None
+      },
+      {
+        'value': 'Stunde',
+        'confidence': 1.0,
+        'rangeStart': 14,
+        'rangeEnd': 20,
+        'time': None
+      },
+      {
+        'value': 'und',
+        'confidence': 1.0,
+        'rangeStart': 21,
+        'rangeEnd': 24,
+        'time': None
+      },
+      {
+        'value': '5',
+        'confidence': 1.0,
+        'rangeStart': 25,
+        'rangeEnd': 26,
+        'time': None
+      },
+      {
+        'value': 'Minute',
+        'confidence': 1.0,
+        'rangeStart': 27,
+        'rangeEnd': 33,
+        'time': None
+      },
+      {
+        'value': 'und',
+        'confidence': 1.0,
+        'rangeStart': 34,
+        'rangeEnd': 37,
+        'time': None
+      },
+      {
+        'value': '20',
+        'confidence': 1.0,
+        'rangeStart': 38,
+        'rangeEnd': 40,
+        'time': None
+      },
+      {
+        'value': 'Sekunden',
+        'confidence': 1.0,
+        'rangeStart': 41,
+        'rangeEnd': 49,
+        'time': None
+      }
+    ]
+  ],
+  'asrConfidence': None,
+  'rawInput': 'nudel timer drei stunde und fünf minute und zwanzig sekunden',
+  'wakewordId': 'hey-mycroft-2',
+  'lang': None
+}

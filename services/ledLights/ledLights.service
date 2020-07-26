@@ -1,0 +1,11 @@
+[Unit]
+Description=Led lights for the 4mic Array respeaker
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/home/pi/home/services/ledLights/ledLights.sh
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target

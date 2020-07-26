@@ -1,0 +1,72 @@
+{
+  'input': 'setze die Musik ganz laut',
+  'intent': {
+    'intentName': 'VolumeControl',
+    'confidenceScore': 0.4
+  },
+  'siteId': 'default',
+  'id': None,
+  'slots': [
+    {
+      'entity': 'scream',
+      'value': {
+        'kind': 'Unknown',
+        'value': 'laut'
+      },
+      'slotName': 'scream',
+      'rawValue': 'laut',
+      'confidence': 1.0,
+      'range': {
+        'start': 21,
+        'end': 25,
+        'rawStart': 21,
+        'rawEnd': 25
+      }
+    }
+  ],
+  'sessionId': 'default-hey-mycroft-2-c1facfbe-74f5-4999-a209-d8a4e8605120',
+  'customData': None,
+  'asrTokens': [
+    [
+      {
+        'value': 'setze',
+        'confidence': 1.0,
+        'rangeStart': 0,
+        'rangeEnd': 5,
+        'time': None
+      },
+      {
+        'value': 'die',
+        'confidence': 1.0,
+        'rangeStart': 6,
+        'rangeEnd': 9,
+        'time': None
+      },
+      {
+        'value': 'Musik',
+        'confidence': 1.0,
+        'rangeStart': 10,
+        'rangeEnd': 15,
+        'time': None
+      },
+      {
+        'value': 'ganz',
+        'confidence': 1.0,
+        'rangeStart': 16,
+        'rangeEnd': 20,
+        'time': None
+      },
+      {
+        'value': 'laut',
+        'confidence': 1.0,
+        'rangeStart': 21,
+        'rangeEnd': 25,
+        'time': None
+      }
+    ]
+  ],
+  'asrConfidence': None,
+  'rawInput': 'setze die musik ganz laut timer für dreißig',
+  'wakewordId': 'hey-mycroft-2',
+  'lang': None
+}
