@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 import json, random
-import time, io, configparser
+import io, configparser
 import paho.mqtt.client as mqtt
-from datetime import datetime
-import datetime
+
 
 from services.musicPlayer.musicplayer import MuuzikPlayer
 from services.date.date import DateService
@@ -42,7 +41,7 @@ MODES = {
     "PLAYINMUSIC": "PLAYINMUSIC",
     "SCANNING": "SCANNING",
 }
-
+#Perhaps this is stupid but there must be some way in which one know what is really happening
 ACTIVEMODE = "LISTENING"
 print(ACTIVEMODE)
 
