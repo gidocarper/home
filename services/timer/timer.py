@@ -1,11 +1,7 @@
 #!/usr/bin/env python3
 import json
-import paho.mqtt.client as mqtt
-from hermes_python.hermes import Hermes
 from datetime import timedelta
-import time
 from threading import Thread
-import toml
 from subprocess import call
 import time
 
@@ -86,7 +82,15 @@ class TimerBase(Thread):
             result = intentMessage["language"]["timerBase"]["get_duration_raw"]["days"].format(str(days), add_and, result)
         return result
 
+
+    def run(self):
+        # print("[{}] Start teimer: wait {} seconds".format(time.time(), self.wait_seconds))
+        self._start_time = time.time()
+        time.sleep(self.wait_seconds)
+        self.__callback()
+
     def __callback(self):
+        # print("[{}] End timer: wait {} seconds".format(time.time(), self.wait_seconds))
         TIMER_LIST.remove(self)
         self.callback()
 
@@ -113,6 +117,7 @@ class TimerSendNotification(TimerBase):
             text = self.LANGUAGE["timerSendNotification"]["send_end"]["timerWithName"].format(str(self.durationRaw),str(self.timerType))
         else:
             text = self.LANGUAGE["timerSendNotification"]["send_end"]["timerWithOutName"].format(str(self.durationRaw), str(self.timerType), str(self.sentence))
+
         self.hermes.publish("hermes/tts/say", json.dumps({"text": text, "siteId": self.site_id}))
 
 
@@ -154,7 +159,6 @@ def timerRemainingTime(hermes, intentMessage):
     text =  intentMessage['language']['timerRemainingTime']['amountOfTimers'].format(str(len_timer_list))
     if len_timer_list == 1:
         text = intentMessage['language']['timerRemainingTime']['oneTimer']
-    print(' jo')
     counter = 0
     if len_timer_list < 1:
         hermes.publish("hermes/tts/say", json.dumps({"text": intentMessage['language']['timerRemainingTime']['noTimer'], "siteId": intentMessage["site_id"]}))
@@ -166,7 +170,6 @@ def timerRemainingTime(hermes, intentMessage):
                 AmountOfTimer = ''
             text += intentMessage['language']['timerRemainingTime']['multipleTimerTypes'].format(AmountOfTimer, timers['timer_type'], timeLeft)
             counter = counter + 1
-        print('text')
         hermes.publish("hermes/tts/say", json.dumps({"text": text, "siteId": intentMessage["site_id"]}))
 
 
