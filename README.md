@@ -22,3 +22,13 @@ check out what this script does here:
 
 
 
+this is an adapated fork from the snips timer  (this one is better!) 
+
+https://github.com/gidocarper/snips-skill-timer
+
+and 
+
+https://github.com/Ultchad/snips-skill-timer
+
+the sound comes from this website:
+http://www.orangefreesounds.com/gentle-wake-alarm-clock/
