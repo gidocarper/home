@@ -14,3 +14,11 @@ to be able to use this project install rhasspy
 these are two great videos from ulno.net 
 most import ist the installation of Rhasspy
 
+
+check out what this script does here:
+
+    https://www.youtube.com/watch?v=QdN1gkI8h0M
+
+
+
+

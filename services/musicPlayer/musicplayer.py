@@ -42,7 +42,6 @@ class MuuzikPlayer:
                         albumArtist = str(audiofile.albumartist)
                         artist = str(audiofile.artist)
                         year = str(audiofile.year)
-                        print(audiofile)
                         a = albumArtist
                         if albumArtist == 'None':
                             a = artist
@@ -83,9 +82,7 @@ class MuuzikPlayer:
 
     def play(self, intent_message):
         self.playlist = []
-        print('play music ' + intent_message)
         if not str(os.path.exists(self.pathToMusic + '/musicFound.json')):
-            print('play Musik')
             self.scanMusic()
 
         if len(self.musicFile) == 0:

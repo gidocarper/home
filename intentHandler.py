@@ -43,7 +43,6 @@ MODES = {
 }
 #Perhaps this is stupid but there must be some way in which one know what is really happening
 ACTIVEMODE = "LISTENING"
-print(ACTIVEMODE)
 
 music = MuuzikPlayer({'language': LANGUAGE["musicPlayer"]})
 dateService = DateService({'language': LANGUAGE["dateService"]})
@@ -130,9 +129,7 @@ def on_message(client, userdata, msg):
     if msg.topic == "hermes/intent/ScanWlan":
         ACTIVEMODE = MODES["SCANNING"]
         wlanService = Wlan()
-        print(LANGUAGE["wlan"])
         sentence = wlanService.scan({'language': LANGUAGE["wlan"]})
-        print(sentence)
         ACTIVEMODE = MODES["LISTENING"]
 
     ###############################################    Timer      ###############################################
@@ -151,9 +148,7 @@ def on_message(client, userdata, msg):
             'session_id': site_id,
             'language': LANGUAGE['timer']
         }
-        print(intentMessage)
-        print(
-            '###############################################    Timer      ###############################################')
+
         timerRemainingTime(client, intentMessage)
 
     if msg.topic == 'hermes/intent/Timer':
@@ -164,7 +159,6 @@ def on_message(client, userdata, msg):
             'seconds': 0
         }
         slotAmount = len(intent["slots"])
-        print(intent)
         startAtIndex = 0
         TimerType = LANGUAGE['timer']['timer']
 
@@ -192,7 +186,6 @@ def on_message(client, userdata, msg):
             'duration': duration,
             'language': LANGUAGE['timer']
         }
-        print(intentMessage)
         startTimer(client, intentMessage)
 
 
