@@ -8,8 +8,10 @@ from os import path
 import json
 import pygame
 import threading, random
+
 NEXT = pygame.USEREVENT + 1
 os.environ["SDL_VIDEODRIVER"] = "dummy"
+
 
 class MuuzikPlayer:
     def __init__(self, intentMessage):
@@ -42,6 +44,7 @@ class MuuzikPlayer:
                         albumArtist = str(audiofile.albumartist)
                         artist = str(audiofile.artist)
                         year = str(audiofile.year)
+                        print(audiofile)
                         a = albumArtist
                         if albumArtist == 'None':
                             a = artist
@@ -68,15 +71,15 @@ class MuuzikPlayer:
         if (numberOfSongsAfterScan > numberOfSongsBeforeScan):
             return self.language["foundNewSongs"].format(numberOfSongsAfterScan - numberOfSongsBeforeScan)
 
-        #TODO add found artists to slot artists
-        #TODO check which songs are new and only add these artists to the artists slot
-        #TODO add song titles and albums as slot too
+        # TODO add found artists to slot artists
+        # TODO check which songs are new and only add these artists to the artists slot
+        # TODO add song titles and albums as slot too
 
         return self.language["scanningIsDone"]
 
     def countMySongs(self):
         musicFile = open(self.pathToMusic + '/musicFound.json')
-        allSongs= json.load(musicFile)
+        allSongs = json.load(musicFile)
         musicFile.close()
         return len(allSongs)
 
@@ -111,7 +114,6 @@ class MuuzikPlayer:
 
         return self.playSong()
 
-
     def next(self):
         self.backgroundthread = None
         if self.current_track < len(self.playlist) - 1:
@@ -131,7 +133,7 @@ class MuuzikPlayer:
         self.playSong()
         return self.language['previuosSong']
 
-    #Not implemented yet
+    # Not implemented yet
     def repeat(self):
         self.playSong()
         return 'okay ich wieder hole'
@@ -139,11 +141,10 @@ class MuuzikPlayer:
     def stop(self):
         self.stopTheMusic = True
         pygame.mixer.music.stop()
-        pygame.mixer.set_endevent(type)
+        # pygame.mixer.set_endevent(type)
         pygame.quit()
         self.backgroundthread = None
         return self.language['stoppedTheMusic']
-
 
     def playSong(self):
         # I am sure this is not the right way to use a thread but I have no clue how to play the music while
@@ -178,7 +179,7 @@ class MuuzikPlayer:
         self.running = True
 
         while pygame.mixer.music.get_busy():
-           nothing = True
+            nothing = True
 
         if self.stopTheMusic == False:
             self.next()
@@ -186,5 +187,5 @@ class MuuzikPlayer:
 
 
 
- 
+
 
