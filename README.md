@@ -22,6 +22,8 @@ check out what this script does here:
 install with:
 
 pip install paho-mqtt
+or if this doesnt work use:
+sudo pip install paho-mqtt -t ./
 
 pip install tinytag
 
