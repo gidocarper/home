@@ -20,10 +20,15 @@ check out what this script does here:
     https://www.youtube.com/watch?v=QdN1gkI8h0M
 
 install with:
+
 pip install paho-mqtt
+
 pip install tinytag
+
 pip install wifi
+
 pip install pyalsaaudio
+
 pip3 install -r requirements.txt
 
 
