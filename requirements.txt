@@ -1,15 +1,6 @@
-imutils
-pandas
-numpy
-awscli
-urllib3
-tqdm
-opencv-python
-scikit-learn
 python-slugify
 hermes_python>=0.3.3
 requests
-toml>=0.10.0
 tinytag>=1.2.2
 pygame>=1.9.6
 wifi>=0.3.8
